@@ -1,0 +1,96 @@
+@import url("https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.2/font/bootstrap-icons.min.css");
+@import url('https://fonts.googleapis.com/css2?family=Manrope&display=swap');
+
+h2,
+p,
+a {
+    font-family: 'Manrope', sans-serif;
+}
+
+.body-login {
+    margin: 0;
+    background: #CCBBF2;
+}
+
+.container-login {
+    border-radius: 30px;
+    overflow: hidden;
+    box-shadow: 0px 0px 30px 0px rgba(0, 0, 0, 0.4);
+    -webkit-box-shadow: 0px 0px 30px 0px rgba(0, 0, 0, 0.4);
+    -moz-box-shadow: 0px 0px 30px 0px rgba(0, 0, 0, 0.4);
+}
+
+.form-login {
+    width: 50%;
+    padding: 0 1rem;
+    background: #F2F2F2;
+}
+
+.input-login {
+    background-color: lightgrey;
+    padding: 0.5rem;
+    margin: 0.25rem 0;
+    border-radius: 8px;
+    width: 200px;
+}
+
+.input-login>input {
+    border: none;
+    outline: none;
+    background-color: transparent;
+    font-family: 'Manrope', sans-serif;
+    width: 100%;
+}
+
+.input-login>i {
+    color: gray;
+}
+
+.button-login {
+    border: none;
+    padding: 0.5rem 0;
+    border-radius: 20px;
+    color: whitesmoke;
+    width: 216px;
+    background: #8857F2;
+}
+
+.img-login {
+    object-position: center;
+    object-fit: cover;
+    width: 100%;
+    height: 100%;
+}
+
+.help-text {
+    color: gray;
+    font-size: small;
+}
+
+.footer {
+    flex-grow: 1;
+    justify-content: end;
+}
+
+
+@media only screen and (min-width: 1024px) {
+    .container-login {
+        width: 700px;
+        height: 500px;
+    }
+
+    .button-login {
+        width: 296px;
+    }
+
+    .input-login {
+        width: 280px;
+    }
+}
+
+@media only screen and (max-width:1023px) {
+    .container-login {
+        width: 600px;
+        height: 400px;
+    }
+}

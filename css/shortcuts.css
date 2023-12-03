@@ -1,0 +1,62 @@
+/*Flex*/
+.flex {
+    display: flex;
+}
+
+.row {
+    flex-direction: row;
+}
+
+.column {
+    flex-direction: column;
+}
+
+.justify-center {
+    justify-content: center;
+}
+
+.align-items-center {
+    align-items: center;
+}
+
+/*Text*/
+.text-center {
+    text-align: center;
+}
+
+/*Position*/
+.absolute {
+    position: absolute;
+}
+
+/**/
+.cursor-pointer {
+    cursor: pointer;
+}
+
+.cursor-default {
+    cursor: default;
+}
+
+/*Spacing*/
+.m-auto {
+    margin: auto;
+}
+
+.my-2 {
+    margin-top: 0.5rem;
+    margin-bottom: 0.5rem;
+}
+
+/*Sizing*/
+.w-full {
+    width: 100%;
+}
+
+.h-full {
+    height: 100%;
+}
+
+.h-screen {
+    height: 100vh;
+}

@@ -14,28 +14,61 @@
             <div>
                 <img class="img-login" src="images/login-desing.jpg" />
             </div>
-            <form class="form-login flex column justify-center">
-                <h2 class="text-center">Login</h2>
-                <div class="m-auto">
-                    <div class="input-login flex row align-items-center">
-                        <i class="bi bi-person-raised-hand"></i>
-                        <input type="text" placeholder="Email">
+            <div class="form-login-container relative">
+                <form id="form-signin" class="w-full h-full flex column justify-center absolute">
+                    <h2 class="text-center">SignIn</h2>
+                    <div class="m-auto">
+                        <div class="input-login flex row align-items-center">
+                            <i class="bi bi-person-raised-hand"></i>
+                            <input type="text" placeholder="Username">
+                        </div>
+                        <div class="input-login flex row align-items-center">
+                            <i class="bi bi-lock-fill"></i>
+                            <input type="password" placeholder="Password">
+                        </div>
+                        <button class="button-login my-2 cursor-pointer">SIGN IN</button>
                     </div>
-                    <div class="input-login flex row align-items-center">
-                        <i class="bi bi-lock-fill"></i>
-                        <input type="password" placeholder="Password">
+                    <a class="help-text text-center" href="#">Forgot your email or password?</a>
+                    <div class="flex column footer">
+                        <p class="text-center help-text cursor-pointer" onclick="toggleForms()">Create your account <i
+                                class="bi bi-arrow-down"></i></p>
                     </div>
-                    <button class="button-login my-2 cursor-pointer">LOGIN</button>
-                </div>
-                <a class="help-text text-center" href="#">Forgot your email or password?</a>
-                <div class="flex column footer">
-                    <p class="text-center help-text cursor-pointer">Create your account <i
-                            class="bi bi-arrow-right"></i></p>
-                </div>
+                </form>
 
-            </form>
+                <form id="form-signup" class="w-full h-full flex column justify-center absolute">
+                    <h2 class="text-center">SignUp</h2>
+                    <div class="m-auto">
+                        <div class="input-login flex row align-items-center">
+                            <i class="bi bi-person-raised-hand"></i>
+                            <input type="text" placeholder="Username">
+                        </div>
+                        <div class="input-login flex row align-items-center">
+                            <i class="bi bi-envelope-at-fill"></i>
+                            <input type="email" placeholder="Email">
+                        </div>
+                        <div class="input-login flex row align-items-center">
+                            <i class="bi bi-unlock-fill"></i>
+                            <input type="password" placeholder="Password">
+                        </div>
+                        <div class="input-login flex row align-items-center">
+                            <i class="bi bi-lock-fill"></i>
+                            <input type="password" placeholder="Confirm your password">
+                        </div>
+                        <button class="button-login my-2 cursor-pointer">SIGN UP</button>
+                    </div>
+                    <div class="flex column footer">
+                        <p class="text-center help-text cursor-pointer" onclick="toggleForms()">Do you already have an account?<i
+                            class="bi bi-arrow-up"></i></p>
+                    </div>
+                </form>
+
+                
+            </div>
+
         </section>
     </main>
+
+    <script src="/js/styles.controller.js"></script>
 </body>
 
 </html>

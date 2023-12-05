@@ -29,6 +29,10 @@
     position: absolute;
 }
 
+.relative{
+    position: relative;
+}
+
 /**/
 .cursor-pointer {
     cursor: pointer;

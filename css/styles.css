@@ -20,10 +20,20 @@ a {
     -moz-box-shadow: 0px 0px 30px 0px rgba(0, 0, 0, 0.4);
 }
 
-.form-login {
+.form-login-container {
     width: 50%;
     padding: 0 1rem;
     background: #F2F2F2;
+}
+
+.form-login-container > form{
+    top: 0;
+    left: 0;
+    transition: transform 1s ease;
+}
+
+.form-login-container form[id="form-signup"]{
+    transform: translateY(100%);
 }
 
 .input-login {
@@ -44,6 +54,7 @@ a {
 
 .input-login>i {
     color: gray;
+    margin-right: 3px;
 }
 
 .button-login {

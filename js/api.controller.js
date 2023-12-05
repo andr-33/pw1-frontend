@@ -1,4 +1,4 @@
-const signInUser = () =>{
+const signInUser = () => {
     const username = document.getElementById("username-signin").value;
     const password = document.getElementById("password-signin").value;
 
@@ -10,39 +10,57 @@ const signInUser = () =>{
     const options = {
         method: 'POST',
         body: JSON.stringify(body),
-        headers:{
+        headers: {
             'Content-Type': 'application/json'
         }
     };
 
-    fetch('/login', options)
-        .then(res=>{
-            console.log(res.body);
+    fetch('http://localhost:8080/api/authentication/signin', options)
+        .then(res => {
+            console.log(res);
         });
 };
 
 
-const signUpUser = () =>{
+const signUpUser = () => {
     const username = document.getElementById("username-signup").value;
     const email = document.getElementById("email-signup").value;
     const password = document.getElementById("password-signup").value;
+    const adminRole = document.getElementById("cb-admin");
+    const userRole = document.getElementById("cb-user");
+    const moderatorRole = document.getElementById("cb-moderator");
+
+    const roles = [];
+
+    if (adminRole.checked) {
+        roles.push(adminRole.value);
+    }
+
+    if (userRole.checked) {
+        roles.push(userRole.value);
+    }
+
+    if (moderatorRole.checked) {
+        roles.push(moderatorRole.value);
+    }
 
     const body = {
         "username": username,
         "email": email,
+        "roles": roles,
         "password": password
     };
 
     const options = {
         method: 'POST',
         body: JSON.stringify(body),
-        headers:{
+        headers: {
             'Content-Type': 'application/json'
         }
     };
 
-    fetch('/signup', options)
-        .then(res=>{
-            console.log(res.body);
+    fetch('http://localhost:8080/api/user/signup', options)
+        .then(res => {
+            console.log(res);
         });
 };

@@ -3,8 +3,10 @@
 
 <head>
     <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="css/styles.css" />
     <link rel="stylesheet" href="css/shortcuts.css" />
+    <link rel="stylesheet" href="css/main.css" />
     <title>Hola :3</title>
 </head>
 
@@ -26,7 +28,9 @@
                             <i class="bi bi-lock-fill"></i>
                             <input id="password-signin" type="password" placeholder="Password">
                         </div>
-                        <button class="button-login my-2 cursor-pointer" onclick="signInUser()">SIGN IN</button>
+                        <button type="button" class="button-login my-2 cursor-pointer" onclick="signInUser()">
+                            SIGN IN
+                        </button>
                     </div>
                     <a class="help-text text-center" href="#">Forgot your email or password?</a>
                     <div class="flex column footer">
@@ -35,7 +39,7 @@
                     </div>
                 </form>
 
-                <form id="form-signup" class="w-full h-full flex column justify-center absolute">
+                <form id="form-signup" class="w-full h-full flex column justify-center absolute" onsubmit="">
                     <h2 class="text-center">SignUp</h2>
                     <div class="m-auto">
                         <div class="input-login flex row align-items-center">
@@ -48,23 +52,21 @@
                         </div>
                         <div class="input-login flex row align-items-center">
                             <i class="bi bi-clipboard-check-fill"></i>
-                            <p>Roles</p>
-
-                            <div class="flex row">
-                                <input type="checkbox" value="admin" />
-                                <label>Admin</label>
+                            <p class="">Roles</p>
+                            <div style="flex-grow: 1;" class="flex row justify-between">
+                                <div>
+                                    <input id="cb-admin" type="checkbox" value="admin" />
+                                    <label for="cb-admin">Admin</label>
+                                </div>
+                                <div>
+                                    <input id="cb-user" type="checkbox" value="user" />
+                                    <label for="cb-user">User</label>
+                                </div>
+                                <div>
+                                    <input id="cb-moderator" type="checkbox" value="moderator" />
+                                    <label for="cb-moderator">Moderator</label>
+                                </div>
                             </div>
-
-                            <div class="flex row">
-                                <input type="checkbox" value="user" />
-                                <label>User</label>
-                            </div>
-
-                            <div class="flex row">
-                                <input type="checkbox" value="moderator" />
-                                <label>Moderator</label>
-                            </div>
-
                         </div>
                         <div class="input-login flex row align-items-center">
                             <i class="bi bi-unlock-fill"></i>
@@ -74,7 +76,9 @@
                             <i class="bi bi-lock-fill"></i>
                             <input type="password" placeholder="Confirm your password">
                         </div>
-                        <button class="button-login my-2 cursor-pointer" onclick="signUpUser()">SIGN UP</button>
+                        <button type="button" class="button-login my-2 cursor-pointer" onclick="signUpUser()">
+                            SIGN UP
+                        </button>
                     </div>
                     <div class="flex column footer">
                         <p class="text-center help-text cursor-pointer" onclick="toggleForms()">Do you already have an

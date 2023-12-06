@@ -16,9 +16,12 @@ const signInUser = () => {
     };
 
     fetch('http://localhost:8080/api/authentication/signin', options)
-        .then(res => {
-            console.log(res);
-        });
+        .then(res => res.json())
+        .then(data => {
+            console.log(data)
+            sessionStorage.setItem("token", data.accessToken);
+        })
+        .catch(err => console.log(err));
 };
 
 
@@ -61,6 +64,9 @@ const signUpUser = () => {
 
     fetch('http://localhost:8080/api/user/signup', options)
         .then(res => {
-            console.log(res);
-        });
+            res.json();
+            document.getElementById("toggleSignin").click();
+        })
+        .then(data => console.log(data))
+        .catch(err => console.log(err));
 };

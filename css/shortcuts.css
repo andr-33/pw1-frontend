@@ -56,6 +56,10 @@
     margin-bottom: 0.5rem;
 }
 
+.pl-2 {
+    padding-left: 0.5rem;
+}
+
 /*Sizing*/
 .w-full {
     width: 100%;

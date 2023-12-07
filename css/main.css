@@ -43,6 +43,11 @@ input[type="checkbox"]:checked+label::before {
         height: 500px;
     }
 
+    .container-home {
+        width: 700px;
+        height: 500px;
+    }
+
     .button-login {
         width: 296px;
     }
@@ -54,6 +59,11 @@ input[type="checkbox"]:checked+label::before {
 
 @media only screen and (max-width:1023px) {
     .container-login {
+        width: 600px;
+        height: 400px;
+    }
+
+    .container-home {
         width: 600px;
         height: 400px;
     }

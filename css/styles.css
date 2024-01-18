@@ -1,11 +1,4 @@
-@import url("https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.2/font/bootstrap-icons.min.css");
 @import url('https://fonts.googleapis.com/css2?family=Manrope&display=swap');
-
-h2,
-p,
-a {
-    font-family: 'Manrope', sans-serif;
-}
 
 .body-login {
     margin: 0;
@@ -20,10 +13,20 @@ a {
     -moz-box-shadow: 0px 0px 30px 0px rgba(0, 0, 0, 0.4);
 }
 
-.form-login {
+.form-login-container {
     width: 50%;
     padding: 0 1rem;
     background: #F2F2F2;
+}
+
+.form-login-container>form {
+    top: 0;
+    left: 0;
+    transition: transform 1s ease;
+}
+
+.form-login-container form[id="form-signup"] {
+    transform: translateY(100%);
 }
 
 .input-login {
@@ -44,15 +47,28 @@ a {
 
 .input-login>i {
     color: gray;
+    margin-right: 3px;
+}
+
+.input-login>p {
+    margin-block-start: 0;
+    margin-block-end: 0;
+    color: gray;
+    font-size: small;
+    margin-right: 5px;
 }
 
 .button-login {
     border: none;
     padding: 0.5rem 0;
     border-radius: 20px;
-    color: whitesmoke;
+    color: #F2F2F2;
     width: 216px;
     background: #8857F2;
+}
+
+.button-login:hover {
+    background-color: rgba(136, 87, 242, 0.9);
 }
 
 .img-login {
@@ -62,35 +78,62 @@ a {
     height: 100%;
 }
 
+.content-home {
+    flex-grow: 1;
+}
+
+.container-home {
+    border-radius: 30px;
+    background-color: lightgray;
+    border: gray solid 2px;
+}
+
+.sidebar {
+    width: 300px;
+    height: 100%;
+    background: #8857F2;
+    overflow: hidden;
+}
+
+.title-sidebar {
+    background-color: #F2F2F2;
+    margin-block-end: 0;
+    padding: 1rem 0;
+}
+
+.navegation-home {
+    padding: 0.5rem 0;
+}
+
+.navegation-home>a {
+    text-decoration: none;
+    color: #F2F2F2;
+    display: inline-block;
+    transition: transform 0.3s ease, text-decoration 0.3s ease;
+    padding-left: 1.5rem;
+}
+
+.navegation-home>a:hover {
+    text-decoration: underline;
+    transform: scale(1.1);
+}
+
 .help-text {
     color: gray;
+    font-size: small;
+}
+
+.ok-text {
+    color: rgb(25, 194, 25);
+    font-size: small;
+}
+
+.err-text {
+    color: red;
     font-size: small;
 }
 
 .footer {
     flex-grow: 1;
     justify-content: end;
-}
-
-
-@media only screen and (min-width: 1024px) {
-    .container-login {
-        width: 700px;
-        height: 500px;
-    }
-
-    .button-login {
-        width: 296px;
-    }
-
-    .input-login {
-        width: 280px;
-    }
-}
-
-@media only screen and (max-width:1023px) {
-    .container-login {
-        width: 600px;
-        height: 400px;
-    }
 }

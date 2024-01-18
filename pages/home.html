@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+</head>
+
+<body>
+    <div class="w-full h-screen flex row">
+        <section class="sidebar flex column">
+            <h2 class="pl-2 title-sidebar">Hello <i class="bi bi-emoji-wink-fill"></i></h2>
+            <nav class="flex column w-full navegation-home ">
+                <a onclick="getAdminContent()">Admin content</a>
+                <a onclick="getModeratorContent()">Moderator content</a>
+                <a onclick="getUserContent()">User content</a>
+                <a onclick="getPublicContent()">Public content</a>
+            </nav>
+            <div class="flex column footer">
+
+            </div>
+        </section>
+        <main class="flex content-home justify-center align-items-center">
+            <div class="flex container-home justify-center align-items-center">
+                <p id="home-msg"></p>
+            </div>
+        </main>
+    </div>
+</body>
+
+</html>

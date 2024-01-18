@@ -15,6 +15,10 @@
     justify-content: center;
 }
 
+.justify-between {
+    justify-content: space-between;
+}
+
 .align-items-center {
     align-items: center;
 }
@@ -27,6 +31,10 @@
 /*Position*/
 .absolute {
     position: absolute;
+}
+
+.relative {
+    position: relative;
 }
 
 /**/
@@ -46,6 +54,10 @@
 .my-2 {
     margin-top: 0.5rem;
     margin-bottom: 0.5rem;
+}
+
+.pl-2 {
+    padding-left: 0.5rem;
 }
 
 /*Sizing*/

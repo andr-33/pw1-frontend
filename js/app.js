@@ -16,7 +16,7 @@ const signInUser = () => {
         }
     };
 
-    fetch('http://localhost:8080/api/authentication/signin', options)
+    fetch('http://localhost:8090/api/authentication/signin', options)
         .then(res => res.json())
         .then(data => {
             sessionStorage.setItem("token", data.accessToken);
@@ -66,7 +66,7 @@ const signUpUser = () => {
         }
     };
 
-    fetch('http://localhost:8080/api/user/signup', options)
+    fetch('http://localhost:8090/api/user/signup', options)
         .then(res => res.json())
         .then(data => {
             const showMessage = document.getElementById('signup-msg');
@@ -92,7 +92,7 @@ const getAdminContent = () => {
         }
     };
 
-    fetch('http://localhost:8080/api/test/admin', options)
+    fetch('http://localhost:8090/api/test/admin', options)
         .then(res => res.text())
         .then(data => {
             const showContent = document.getElementById('home-msg');
@@ -116,7 +116,7 @@ const getModeratorContent = () => {
         }
     };
 
-    fetch('http://localhost:8080/api/test/moderator', options)
+    fetch('http://localhost:8090/api/test/moderator', options)
         .then(res => res.text())
         .then(data => {
             const showContent = document.getElementById('home-msg');
@@ -140,7 +140,7 @@ const getUserContent = () => {
         }
     };
 
-    fetch('http://localhost:8080/api/test/user', options)
+    fetch('http://localhost:8090/api/test/user', options)
         .then(res => res.text())
         .then(data => {
             const showContent = document.getElementById('home-msg');
@@ -164,7 +164,7 @@ const getPublicContent = () => {
         }
     };
 
-    fetch('http://localhost:8080/api/test/all', options)
+    fetch('http://localhost:8090/api/test/all', options)
         .then(res => res.text())
         .then(data => {
             const showContent = document.getElementById('home-msg');

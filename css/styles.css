@@ -111,6 +111,7 @@
     display: inline-block;
     transition: transform 0.3s ease, text-decoration 0.3s ease;
     padding-left: 1.5rem;
+    cursor: pointer;
 }
 
 .navegation-home>a:hover {

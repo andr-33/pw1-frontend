@@ -209,6 +209,11 @@ const loadPage = (pageToLoad) => {
         });
 };
 
+const logOut = () => {
+    sessionStorage.removeItem('token');
+    location.reload();
+};
+
 document.addEventListener('DOMContentLoaded', () => {
     const token = sessionStorage.getItem('token');
 
@@ -218,4 +223,4 @@ document.addEventListener('DOMContentLoaded', () => {
     }
 
     loadPage('/pages/home.html');
-})
+});
